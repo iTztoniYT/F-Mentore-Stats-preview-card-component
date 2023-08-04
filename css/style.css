@@ -1,0 +1,82 @@
+@import url(./cssRest.css);
+
+:root{
+    --Very_dark_blue: hsl(233, 47%, 7%);
+    --Dark_desaturated_blue: hsl(244, 38%, 16%);
+    --Soft_violet : hsl(277, 64%, 61%); 
+
+    /* Neutral*/
+    --White: hsl(0, 0%, 100%)
+    --font-family: 'Big Shoulders Display', cursive;
+    --font-accent: 'Lexend Deca', sans-serif;
+    --fc-main: hsla(0, 0%, 100%, 0.75);
+    --fc-slighty-transparent: hsla(0, 0%, 100%, 0.75);
+}
+
+body{
+    /* margin: 0 auto; */
+    background-color: var(--Very_dark_blue);
+    font-size: 0,9375rem;
+    font-family: var(--font-accent);
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+
+    /* For this project only */
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+}
+
+section{
+    background-color: var(--Dark_desaturated_blue);
+    margin: 1rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.text-content{
+    padding: 1.3rem;
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+}
+.header-text{
+    font-size: 1.8rem;
+}
+.header-text span{
+    color: var(--Soft_violet);
+}
+
+.text-decoration{
+    color: var(--fc-slighty-transparent);
+}
+
+.stats-info{
+    display: grid;
+    gap: 1.8rem;
+    margin: 10px 0;
+}
+.stats h5{
+    color: var(--fc-slighty-transparent);
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 671px){
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* font-size: 1.2rem; */
+
+    }
+    .text-content{
+        max-width: 600px;
+        text-align: start;
+        /* width: 400px; */
+    }
+
+    .stats-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr
+    }
+}
